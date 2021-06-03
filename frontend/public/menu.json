@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Permisos",
+    "path": "permisos",
+    "icon": "clipboard",
+    "order": 1,
+    "submodules": [
+      {
+        "name": "Insert",
+        "order": 1,
+        "path": "permisos/insert"
+      },
+      {
+        "name": "Edit",
+        "order": 2,
+        "path": "permisos/edit"
+      }
+    ]
+  },
+  {
+    "name": "Tipo de Permisos",
+    "path": "tipo-permisos",
+    "icon": "clipboard",
+    "order": 2,
+    "submodules": [
+      {
+        "name": "Insert",
+        "order": 1,
+        "path": "tipo-permisos/insert"
+      },
+      {
+        "name": "Edit",
+        "order": 2,
+        "path": "tipo-permisos/edit"
+      }
+    ]
+  }
+]
