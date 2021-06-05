@@ -21,32 +21,32 @@ const router = new Router({
     },
     /////////PRINCIPAL/////////
 
+    /////////EMPRESA/////////
+    {
+      path: '/empresa/permisos',
+      name: 'Permisos',
+      component: () => import(/* webpackChunkName: "permisos" */ '@/views/Empresa/Permisos.vue'),
+      meta: { requiresAuth: true }
+    },
+    {
+      path: '/empresa/tipo-permisos',
+      name: 'TipoPermisos',
+      component: () => import(/* webpackChunkName: "tipo-permisos" */ '@/views/Empresa/TipoPermisos.vue'),
+      meta: { requiresAuth: true }
+    },
+    /////////EMPRESA////////
+
     /////////PERMISOS/////////
     {
-      path: '/permisos/insert',
+      path: '/empresa/permisos/insert',
       name: 'InsertP',
       component: () => import(/* webpackChunkName: "insert" */ '@/views/Permisos/Insert.vue'),
       meta: { requiresAuth: true }
     },
     {
-      path: '/permisos/edit',
+      path: '/empresa/permisos/edit/:id',
       name: 'EditP',
       component: () => import(/* webpackChunkName: "edit" */ '@/views/Permisos/Edit.vue'),
-      meta: { requiresAuth: true }
-    },
-    /////////PERMISOS////////
-
-    /////////TIPO PERMISOS/////////
-    {
-      path: '/tipo-permisos/insert',
-      name: 'InsertT',
-      component: () => import(/* webpackChunkName: "insert" */ '@/views/TipoPermisos/Insert.vue'),
-      meta: { requiresAuth: true }
-    },
-    {
-      path: '/tipo-permisos/edit',
-      name: 'EditT',
-      component: () => import(/* webpackChunkName: "edit" */ '@/views/TipoPermisos/Edit.vue'),
       meta: { requiresAuth: true }
     },
     /////////PERMISOS////////

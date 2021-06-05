@@ -18,7 +18,7 @@ export default new Vuex.Store({
 			snackbar: false,
 			mensaje: null
 		},
-		listLawFirm: []
+		listTipoPermisos: []
 	},
 	mutations: {
 		mostrarLoading(state, payload) {
@@ -47,24 +47,19 @@ export default new Vuex.Store({
 		},
 		setearCombo(state, payload) {
 			state[payload.nombre] = payload.data
-		},
-		registrarDatosPersonales(state, payload) {
-			state.datosPersonales = payload
 		}
 	},
 	actions: {
-		async ListarCombo({ commit }, nombreApi) {
+		async ListarTipoPermisos({ commit }){
 			try {
-				let lista = await axios.get(`${Vue.prototype.$urlApi}${nombreApi}`, {
-					headers: {
+				let tipoPermiso = await axios.get(`${Vue.prototype.$urlApi}TipoPermiso`, {
+					headers: { 
 						'Content-Type': 'application/json',
 					}
 				})
-				commit("setearCombo", { nombre: 'list', data: lista.data })
+				commit("setearCombo", { nombre: 'listTipoPermisos', data: tipoPermiso.data })
 			} catch (error) {
-				console.log(error)
-			} finally {
-
+				console.log(error.message)
 			}
 		}
 	}

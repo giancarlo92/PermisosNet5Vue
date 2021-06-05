@@ -2,7 +2,7 @@
     <v-app>
         <BarraNavegacion />
         <Menu />
-        <Formulario />
+        <DataTipoPermisos />
         <Footer/>
     </v-app>
 </template>
@@ -11,13 +11,12 @@
 import Menu from '@/components/Principal/Menu'
 import BarraNavegacion from '@/components/Principal/BarraNavegacion'
 import Footer from '@/components/Principal/Footer'
-import Formulario from '@/components/TipoPermisos/FormularioTipoPermisos'
-import {mapMutations} from 'vuex'
+import DataTipoPermisos from '@/components/TipoPermisos/DataTipoPermisos'
   export default {
     components: {
       Menu,
       BarraNavegacion,
-      Formulario,
+      DataTipoPermisos,
       Footer
     },
   }

@@ -1,5 +1,5 @@
 {
-    "urlApi": "http://192.168.1.61:80/api/",
+    "urlApi": "https://localhost:44391/api/",
     "colorMenu": "#3e5f8a",
     "colorBarraYFooter": "#3e5f8a",
     "useLogin": true
